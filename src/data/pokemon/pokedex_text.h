@@ -2564,3 +2564,14 @@ const u8 gKleavorPokedexText[] = _(
             "its crude axes and shields itself with hard\n"
             "stone. Should one encounter this Pokémon\n"
             "in the wild, one's only recourse is to flee.");
+
+const u8 gRioluPokedexText[] = _(
+    "They communicate with one another\n"
+    "using their auras. They are able to\n"
+    "run all through the night.");
+
+const u8 gLucarioPokedexText[] = _(
+    "It's said that no foe can remain\n"
+    "invisible to LUCARIO, since it can\n"
+    "detect auras. Even foes it could not\n"
+    "otherwise see.");

@@ -6713,9 +6713,34 @@ static const u64 sTutorLearnsets[] =
                                 | TUTOR(MOVE_SWIFT)
                                 | TUTOR(MOVE_FURY_CUTTER)),
 
-    [SPECIES_UNUSED_SPACE5]             = (0),
-
-    [SPECIES_UNUSED_SPACE6]             = (0),
+    [SPECIES_RIOLU]              = (TUTOR(MOVE_SWORDS_DANCE)
+                                | TUTOR(MOVE_COUNTER)
+                                | TUTOR(MOVE_ROCK_SLIDE)
+                                | TUTOR(MOVE_SUBSTITUTE)
+                                | TUTOR(MOVE_SNORE)
+                                | TUTOR(MOVE_ENDURE)
+                                | TUTOR(MOVE_MUD_SLAP)
+                                | TUTOR(MOVE_ICE_PUNCH)
+                                | TUTOR(MOVE_SWAGGER)
+                                | TUTOR(MOVE_SLEEP_TALK)
+                                | TUTOR(MOVE_SWIFT)
+                                | TUTOR(MOVE_THUNDER_PUNCH)
+                                | TUTOR(MOVE_FURY_CUTTER)
+                                | TUTOR(MOVE_HEADBUTT)),
+    [SPECIES_LUCARIO]            = (TUTOR(MOVE_SWORDS_DANCE)
+                                | TUTOR(MOVE_COUNTER)
+                                | TUTOR(MOVE_ROCK_SLIDE)
+                                | TUTOR(MOVE_SUBSTITUTE)
+                                | TUTOR(MOVE_SNORE)
+                                | TUTOR(MOVE_ENDURE)
+                                | TUTOR(MOVE_MUD_SLAP)
+                                | TUTOR(MOVE_ICE_PUNCH)
+                                | TUTOR(MOVE_SWAGGER)
+                                | TUTOR(MOVE_SLEEP_TALK)
+                                | TUTOR(MOVE_SWIFT)
+                                | TUTOR(MOVE_THUNDER_PUNCH)
+                                | TUTOR(MOVE_FURY_CUTTER)
+                                | TUTOR(MOVE_HEADBUTT)),
 
     [SPECIES_UNUSED_SPACE7]             = (0),
 

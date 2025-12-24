@@ -6421,15 +6421,36 @@ static const u16 sKleavorLevelUpLearnset_Original[] = {
     LEVEL_UP_END
 };
 
-static const u16 sUnusedSpace5LevelUpLearnset_Original[] = {
-    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_END
-};
+static const u16 sRioluLevelUpLearnset_Original[] = {
+    LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
+    LEVEL_UP_MOVE( 1, MOVE_FORESIGHT),
+    LEVEL_UP_MOVE( 1, MOVE_ENDURE),
+    LEVEL_UP_MOVE( 6, MOVE_COUNTER),
+    LEVEL_UP_MOVE(11, MOVE_MACH_PUNCH), // Force Palm
+    LEVEL_UP_MOVE(15, MOVE_HEADBUTT), // Feint
+    LEVEL_UP_MOVE(19, MOVE_REVERSAL),
+    LEVEL_UP_MOVE(24, MOVE_SCREECH),
+    LEVEL_UP_MOVE(29, MOVE_MIMIC), // Copycat
+    LEVEL_UP_END};
 
-static const u16 sUnusedSpace6LevelUpLearnset_Original[] = {
-    LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_END
-};
+static const u16 sLucarioLevelUpLearnset_Original[] = {
+    LEVEL_UP_MOVE( 1, MOVE_DARK_PULSE),
+    LEVEL_UP_MOVE( 1, MOVE_QUICK_ATTACK),
+    LEVEL_UP_MOVE( 1, MOVE_FORESIGHT),
+    LEVEL_UP_MOVE( 1, MOVE_DETECT),
+    LEVEL_UP_MOVE( 1, MOVE_METAL_CLAW),
+    LEVEL_UP_MOVE( 6, MOVE_COUNTER),
+    LEVEL_UP_MOVE(11, MOVE_MACH_PUNCH), // Force Palm
+    LEVEL_UP_MOVE(15, MOVE_HEADBUTT), // Feint
+    LEVEL_UP_MOVE(19, MOVE_BONE_RUSH),
+    LEVEL_UP_MOVE(24, MOVE_METAL_SOUND),
+    LEVEL_UP_MOVE(29, MOVE_MIMIC), // Me First
+    LEVEL_UP_MOVE(33, MOVE_SWORDS_DANCE),
+    LEVEL_UP_MOVE(37, MOVE_BRICK_BREAK), // Aura Sphere
+    LEVEL_UP_MOVE(42, MOVE_BULK_UP), // Close Combat
+    LEVEL_UP_MOVE(47, MOVE_DRAGON_PULSE),
+    LEVEL_UP_MOVE(51, MOVE_EXTREME_SPEED),
+    LEVEL_UP_END};
 
 static const u16 sUnusedSpace7LevelUpLearnset_Original[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),

@@ -5164,25 +5164,25 @@ const struct PokedexEntry gPokedexEntries[] =
         .trainerScale = 286,
         .trainerOffset = 1,
     },
-    [NATIONAL_DEX_UNUSED_SPACE5] =
+    [NATIONAL_DEX_RIOLU] =
     {
-        .categoryName = _("ALPHA"),
-        .height = 32,
-        .weight = 3200,
-        .description = gArceusPokedexText,
-        .pokemonScale = 356,
-        .pokemonOffset = 0,
+        .categoryName = _("AURA"),
+        .height = 7,
+        .weight = 202,
+        .description = gRioluPokedexText,
+        .pokemonScale = 356, //TODO(nlordell)
+        .pokemonOffset = 0, //TODO(nlordell)
         .trainerScale = 256,
         .trainerOffset = 0,
     },
-    [NATIONAL_DEX_UNUSED_SPACE6] =
+    [NATIONAL_DEX_LUCARIO] =
     {
-        .categoryName = _("ALPHA"),
-        .height = 32,
-        .weight = 3200,
-        .description = gArceusPokedexText,
-        .pokemonScale = 356,
-        .pokemonOffset = 0,
+        .categoryName = _("AURA"),
+        .height = 12,
+        .weight = 540,
+        .description = gLucarioPokedexText,
+        .pokemonScale = 356, //TODO(nlordell)
+        .pokemonOffset = 0, //TODO(nlordell)
         .trainerScale = 256,
         .trainerOffset = 0,
     },
