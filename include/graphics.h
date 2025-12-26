@@ -3238,13 +3238,13 @@ extern const u32 gMonStillFrontPic_Riolu[];
 extern const u8 gMonIcon_Riolu[];
 extern const u8 gMonFootprint_Riolu[];
 
-//extern const u32 gMonFrontPic_Lucario[];
-//extern const u32 gMonPalette_Lucario[];
-//extern const u32 gMonBackPic_Lucario[];
-//extern const u32 gMonShinyPalette_Lucario[];
-//extern const u32 gMonStillFrontPic_Lucario[];
-//extern const u8 gMonIcon_Lucario[];
-//extern const u8 gMonFootprint_Lucario[];
+extern const u32 gMonFrontPic_Lucario[];
+extern const u32 gMonPalette_Lucario[];
+extern const u32 gMonBackPic_Lucario[];
+extern const u32 gMonShinyPalette_Lucario[];
+extern const u32 gMonStillFrontPic_Lucario[];
+extern const u8 gMonIcon_Lucario[];
+extern const u8 gMonFootprint_Lucario[];
 
 extern const u32 gMonFrontPic_CircledQuestionMark[];
 extern const u32 gMonBackPic_CircledQuestionMark[];

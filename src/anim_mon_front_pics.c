@@ -467,4 +467,4 @@ const u32 gMonFrontPic_Ursaluna[] = INCBIN_U32("graphics/pokemon/ursaluna/anim_f
 const u32 gMonFrontPic_Ursaluna_BloodMoon[] = INCBIN_U32("graphics/pokemon/ursaluna_bloodmoon/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Kleavor[] = INCBIN_U32("graphics/pokemon/kleavor/anim_front.4bpp.lz");
 const u32 gMonFrontPic_Riolu[] = INCBIN_U32("graphics/pokemon/riolu/anim_front.4bpp.lz");
-//const u32 gMonFrontPic_Lucario[] = INCBIN_U32("graphics/pokemon/lucario/anim_front.4bpp.lz");
+const u32 gMonFrontPic_Lucario[] = INCBIN_U32("graphics/pokemon/lucario/anim_front.4bpp.lz");
