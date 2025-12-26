@@ -1718,7 +1718,21 @@ const u16 gEggMoves[] = {
               MOVE_FUTURE_SIGHT,
               MOVE_RECOVER,
               MOVE_WISH,
-              MOVE_DREAM_EATER),              
+              MOVE_DREAM_EATER),
+
+    egg_moves(RIOLU,
+              MOVE_AGILITY,
+              MOVE_BITE,
+              MOVE_BLAZE_KICK,
+              MOVE_CROSS_CHOP,
+              MOVE_CRUNCH,
+              MOVE_DETECT,
+              MOVE_FOLLOW_ME,
+              MOVE_HI_JUMP_KICK,
+              MOVE_IRON_DEFENSE,
+              MOVE_LOW_KICK,
+              MOVE_MIND_READER,
+              MOVE_SKY_UPPERCUT),
 
     EGG_MOVES_TERMINATOR
 };
@@ -3106,6 +3120,20 @@ const u16 gEggMoves_Old[] = {
               MOVE_SLAM,
               MOVE_MUD_SPORT,
               MOVE_ROCK_SLIDE),
+
+    egg_moves(RIOLU,
+              MOVE_AGILITY,
+              MOVE_BITE,
+              MOVE_BLAZE_KICK,
+              MOVE_CROSS_CHOP,
+              MOVE_CRUNCH,
+              MOVE_DETECT,
+              MOVE_FOLLOW_ME,
+              MOVE_HI_JUMP_KICK,
+              MOVE_IRON_DEFENSE,
+              MOVE_LOW_KICK,
+              MOVE_MIND_READER,
+              MOVE_SKY_UPPERCUT),
 
     EGG_MOVES_TERMINATOR
 };

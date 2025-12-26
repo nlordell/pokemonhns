@@ -873,6 +873,8 @@ const u32 gObjectEventPic_Wyrdeer[] = INCBIN_COMP("graphics/object_events/pics/p
 const u32 gObjectEventPic_Ursaluna[] = INCBIN_COMP("graphics/object_events/pics/pokemon/followers/ursaluna.4bpp");
 const u32 gObjectEventPic_Ursaluna_BloodMoon[] = INCBIN_COMP("graphics/object_events/pics/pokemon/followers/ursaluna_bloodmoon.4bpp");
 const u32 gObjectEventPic_Kleavor[] = INCBIN_COMP("graphics/object_events/pics/pokemon/followers/kleavor.4bpp");
+const u32 gObjectEventPic_Riolu[] = INCBIN_COMP("graphics/object_events/pics/pokemon/riolu.4bpp");
+//const u32 gObjectEventPic_Lucario[] = INCBIN_COMP("graphics/object_events/pics/pokemon/followers/lucario.4bpp");
 
 
 const u16 gObjectEventPal_Rayquaza[] = INCBIN_U16("graphics/object_events/pics/pokemon/rayquaza.gbapal");

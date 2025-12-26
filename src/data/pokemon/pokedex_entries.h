@@ -5170,8 +5170,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 7,
         .weight = 202,
         .description = gRioluPokedexText,
-        .pokemonScale = 356, //TODO(nlordell)
-        .pokemonOffset = 0, //TODO(nlordell)
+        .pokemonScale = 356,
+        .pokemonOffset = 13,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
@@ -5181,8 +5181,8 @@ const struct PokedexEntry gPokedexEntries[] =
         .height = 12,
         .weight = 540,
         .description = gLucarioPokedexText,
-        .pokemonScale = 356, //TODO(nlordell)
-        .pokemonOffset = 0, //TODO(nlordell)
+        .pokemonScale = 324,
+        .pokemonOffset = 6,
         .trainerScale = 256,
         .trainerOffset = 0,
     },
