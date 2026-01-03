@@ -592,4 +592,8 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove);
 
 void FixSavePokemon1(struct BoxPokemon *boxMon);
 
+// My extra stuff...
+void nlordell_ResetMonEVs(struct Pokemon *mon);
+void nlordell_ReRandomizeMon(struct Pokemon *mon);
+
 #endif // GUARD_POKEMON_H

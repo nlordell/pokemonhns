@@ -12218,3 +12218,61 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
     }
     return 0;
 }
+
+// Warning: here be dragons...
+void nlordell_ResetMonEVs(struct Pokemon *mon)
+{
+    u8 zero;
+
+    zero = 0;
+    SetMonData(mon, MON_DATA_HP_EV, &zero);
+    SetMonData(mon, MON_DATA_ATK_EV, &zero);
+    SetMonData(mon, MON_DATA_DEF_EV, &zero);
+    SetMonData(mon, MON_DATA_SPEED_EV, &zero);
+    SetMonData(mon, MON_DATA_SPATK_EV, &zero);
+    SetMonData(mon, MON_DATA_SPDEF_EV, &zero);
+    CalculateMonStats(mon);
+}
+
+void nlordell_ReRandomizeMon(struct Pokemon *mon)
+{
+    struct BoxPokemon *boxMon;
+    union PokemonSubstruct substructs[4];
+    u32 personality;
+    u16 checksum;
+    u32 ivs;
+    u16 species;
+    u8 ability;
+
+    boxMon = &mon->box;
+    DecryptBoxMon(boxMon);
+
+    personality = GetBoxMonData(boxMon, MON_DATA_PERSONALITY, NULL);
+    memcpy(&substructs[0], GetSubstruct(boxMon, personality, 0), NUM_SUBSTRUCT_BYTES);
+    memcpy(&substructs[1], GetSubstruct(boxMon, personality, 1), NUM_SUBSTRUCT_BYTES);
+    memcpy(&substructs[2], GetSubstruct(boxMon, personality, 2), NUM_SUBSTRUCT_BYTES);
+    memcpy(&substructs[3], GetSubstruct(boxMon, personality, 3), NUM_SUBSTRUCT_BYTES);
+
+    personality = Random32();
+    SetBoxMonData(boxMon, MON_DATA_PERSONALITY, &personality);
+    memcpy(GetSubstruct(boxMon, personality, 0), &substructs[0], NUM_SUBSTRUCT_BYTES);
+    memcpy(GetSubstruct(boxMon, personality, 1), &substructs[1], NUM_SUBSTRUCT_BYTES);
+    memcpy(GetSubstruct(boxMon, personality, 2), &substructs[2], NUM_SUBSTRUCT_BYTES);
+    memcpy(GetSubstruct(boxMon, personality, 3), &substructs[3], NUM_SUBSTRUCT_BYTES);
+
+    checksum = CalculateBoxMonChecksum(boxMon);
+    SetBoxMonData(boxMon, MON_DATA_CHECKSUM, &checksum);
+    EncryptBoxMon(boxMon);
+
+    ivs = Random32();
+    SetBoxMonData(boxMon, MON_DATA_IVS, &ivs);
+
+    species = GetBoxMonData(boxMon, MON_DATA_SPECIES, NULL);
+    if (GetAbilityBySpecies(species, 1) != ABILITY_NONE)
+    {
+        ability = personality & 1;
+        SetBoxMonData(boxMon, MON_DATA_ABILITY_NUM, &ability);
+    }
+
+    CalculateMonStats(mon);
+}

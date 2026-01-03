@@ -246,6 +246,8 @@ gScriptCmdTable::
 	.4byte ScrCmd_buffermoncategory                 @ 0xf3 needed for random starters
 	.4byte ScrCmd_checknuzlocke						@ 0xf4 checks if nuzlocking
 	.4byte ScrCmd_checkrandomizer					@ 0xf5 checks if randomized
+	.4byte ScrCmd_nlordell_resetevs                 @ 0xf6
+	.4byte ScrCmd_nlordell_rerandomize              @ 0xf7
 
 
 gScriptCmdTableEnd::

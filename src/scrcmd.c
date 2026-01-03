@@ -3330,3 +3330,33 @@ bool8 ScrCmd_checkrandomizer(struct ScriptContext *ctx)
     }     
     return FALSE;
 }
+
+bool8 ScrCmd_nlordell_resetevs(struct ScriptContext *ctx)
+{
+    nlordell_ResetMonEVs(&gPlayerParty[0]);
+    return FALSE;
+}
+
+bool8 ScrCmd_nlordell_rerandomize(struct ScriptContext *ctx)
+{
+    struct Pokemon *mon;
+    u8 *str;
+
+    mon = &gPlayerParty[0];
+    nlordell_ReRandomizeMon(&gPlayerParty[0]);
+
+    str = gStringVar1;
+#define APPEND_IV_STR(dat) \
+    str = ConvertIntToDecimalStringN(str, GetMonData(mon, dat, NULL), STR_CONV_MODE_LEFT_ALIGN, 2)
+#define APPEND_SPACE() \
+    (str++)[0] = CHAR_SPACE;
+
+    APPEND_IV_STR(MON_DATA_HP_IV); APPEND_SPACE();
+    APPEND_IV_STR(MON_DATA_ATK_IV); APPEND_SPACE();
+    APPEND_IV_STR(MON_DATA_DEF_IV); APPEND_SPACE();
+    APPEND_IV_STR(MON_DATA_SPATK_IV); APPEND_SPACE();
+    APPEND_IV_STR(MON_DATA_SPDEF_IV); APPEND_SPACE();
+    APPEND_IV_STR(MON_DATA_SPEED_IV);
+
+    return FALSE;
+}

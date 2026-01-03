@@ -166,6 +166,51 @@ NewBarkTown_EventScript_Door::
 	msgbox NewBarkTown_Text_Door, MSGBOX_SIGN
 	end
 
+
+NewBarkTown_EventScript_HelperMan1::
+	lock
+	faceplayer
+	goto_if_unset FLAG_IS_CHAMPION, HelperMan_EventScript_NotChampion
+	msgbox HelperMan_Text_GiftBPs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HelperMan_EventScript_Declined
+	givebp 42
+	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
+	release
+	end
+
+NewBarkTown_EventScript_HelperMan2::
+	lock
+	faceplayer
+	goto_if_unset FLAG_IS_CHAMPION, HelperMan_EventScript_NotChampion
+	msgbox HelperMan_Text_ResetEVs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HelperMan_EventScript_Declined
+	nlordell_resetevs
+	msgbox HelperMan_Text_ResetEVsComplete, MSGBOX_DEFAULT
+	release
+	end
+
+NewBarkTown_EventScript_HelperMan3::
+	lock
+	faceplayer
+	goto_if_unset FLAG_IS_CHAMPION, HelperMan_EventScript_NotChampion
+	msgbox HelperMan_Text_ReRandomize, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HelperMan_EventScript_Declined
+	nlordell_rerandomize
+	msgbox HelperMan_Text_ReRandomizeComplete, MSGBOX_DEFAULT
+	release
+	end
+
+HelperMan_EventScript_NotChampion::
+	msgbox HelperMan_Text_NotChampion, MSGBOX_DEFAULT
+	release
+	end
+
+HelperMan_EventScript_Declined::
+	msgbox HelperMan_Text_Declined, MSGBOX_DEFAULT
+	release
+	end
+
+
 NewBarkTown_EventScript_TestMan1::
 	givebp 4
 	msgbox BattleFrontier_Text_ObtainedXBattlePoints, MSGBOX_GETPOINTS
@@ -282,3 +327,30 @@ NewBarkTown_Text_PlayersHouse:
 
 NewBarkTown_Text_ElmsHouse:
 	.string "PROF.ELM'S HOUSE$"
+
+
+HelperMan_Text_NotChampion:
+	.string "Come back when you're champion.$"
+
+HelperMan_Text_GiftBPs:
+	.string "I can give you a few BATTLE\n"
+	.string "POINTS because you look nice.$"
+
+HelperMan_Text_ResetEVs:
+	.string "I can reset the EVs for your\n"
+	.string "active POKéMON back to 0.$"
+
+HelperMan_Text_ReRandomize:
+	.string "I can re-randomize your active\n"
+	.string "POKéMON.$"
+
+HelperMan_Text_ResetEVsComplete:
+	.string "All done, your POKéMON EVs\n"
+	.string "have been reset to 0!$"
+
+HelperMan_Text_ReRandomizeComplete:
+	.string "Your POKéMON's IVs are now:\n"
+	.string "{STR_VAR_1}.$"
+
+HelperMan_Text_Declined:
+	.string "Come back whenever!$"

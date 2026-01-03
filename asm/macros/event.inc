@@ -1848,6 +1848,15 @@
 	.byte 0xf5
 	.endm
 
+	@ Resets EVs for the active Pokemon
+	.macro nlordell_resetevs
+	.byte 0xf6
+	.endm
+	@ Re-randomizes PID and IVs for the active Pokemon
+	.macro nlordell_rerandomize
+	.byte 0xf7
+	.endm
+
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
 	.byte 0xf1
 	.2byte \left
