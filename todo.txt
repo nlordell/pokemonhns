@@ -1,0 +1,6 @@
+# TODO(nlordell): Some additional places to include Riolu/Lucario.
+src/data/bard_music/pokemon.h
+src/data/battle_frontier/battle_frontier_mons.h
+src/data/battle_frontier/battle_frontier_trainer_mons.h
+src/data/easy_chat/easy_chat_group_pokemon2.h
+src/data/easy_chat/easy_chat_words_by_letter.h

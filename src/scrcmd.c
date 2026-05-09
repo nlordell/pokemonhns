@@ -3301,39 +3301,50 @@ bool8 ScrCmd_checknuzlocke(struct ScriptContext *ctx) //untested, unused
     else
     {
         gSpecialVar_Result = FALSE;
-    }     
+    }
     return FALSE;
 }
 
 bool8 ScrCmd_checkrandomizer(struct ScriptContext *ctx)
 {
-    if((gSaveBlock1Ptr->tx_Random_Chaos) 
-        || (gSaveBlock1Ptr->tx_Random_WildPokemon) 
+    if((gSaveBlock1Ptr->tx_Random_Chaos)
+        || (gSaveBlock1Ptr->tx_Random_WildPokemon)
         || (gSaveBlock1Ptr->tx_Random_Similar)
-        || (gSaveBlock1Ptr->tx_Random_MapBased) 
-        || (gSaveBlock1Ptr->tx_Random_IncludeLegendaries) 
+        || (gSaveBlock1Ptr->tx_Random_MapBased)
+        || (gSaveBlock1Ptr->tx_Random_IncludeLegendaries)
         || (gSaveBlock1Ptr->tx_Random_Type)
         || (gSaveBlock1Ptr->tx_Random_TypeEffectiveness)
-        || (gSaveBlock1Ptr->tx_Random_Abilities) 
-        || (gSaveBlock1Ptr->tx_Random_Moves) 
-        || (gSaveBlock1Ptr->tx_Random_Trainer) 
-        || (gSaveBlock1Ptr->tx_Random_Evolutions) 
+        || (gSaveBlock1Ptr->tx_Random_Abilities)
+        || (gSaveBlock1Ptr->tx_Random_Moves)
+        || (gSaveBlock1Ptr->tx_Random_Trainer)
+        || (gSaveBlock1Ptr->tx_Random_Evolutions)
         || (gSaveBlock1Ptr->tx_Random_EvolutionMethods)
         || (gSaveBlock1Ptr->tx_Random_Items)
-        || (gSaveBlock1Ptr->tx_Random_Static) 
+        || (gSaveBlock1Ptr->tx_Random_Static)
         || (gSaveBlock1Ptr->tx_Random_Starter)){
         gSpecialVar_Result = TRUE;
     }
     else
     {
         gSpecialVar_Result = FALSE;
-    }     
+    }
     return FALSE;
 }
 
 bool8 ScrCmd_nlordell_resetevs(struct ScriptContext *ctx)
 {
-    nlordell_ResetMonEVs(&gPlayerParty[0]);
+    struct Pokemon *mon;
+    u8 zero;
+
+    mon = &gPlayerParty[0];
+    zero = 0;
+    SetMonData(mon, MON_DATA_HP_EV, &zero);
+    SetMonData(mon, MON_DATA_ATK_EV, &zero);
+    SetMonData(mon, MON_DATA_DEF_EV, &zero);
+    SetMonData(mon, MON_DATA_SPEED_EV, &zero);
+    SetMonData(mon, MON_DATA_SPATK_EV, &zero);
+    SetMonData(mon, MON_DATA_SPDEF_EV, &zero);
+    CalculateMonStats(mon);
     return FALSE;
 }
 
@@ -3358,5 +3369,21 @@ bool8 ScrCmd_nlordell_rerandomize(struct ScriptContext *ctx)
     APPEND_IV_STR(MON_DATA_SPDEF_IV); APPEND_SPACE();
     APPEND_IV_STR(MON_DATA_SPEED_IV);
 
+    return FALSE;
+}
+
+bool8 ScrCmd_nlordell_maximizeivs(struct ScriptContext *ctx)
+{
+    struct Pokemon *mon;
+    u8 nature;
+    u32 ivs;
+
+    mon = &gPlayerParty[0];
+    nature = NATURE_QUIRKY;
+    ivs = 0xffffffff;
+
+    SetMonData(mon, MON_DATA_HIDDEN_NATURE, &nature);
+    SetMonData(mon, MON_DATA_IVS, &ivs);
+    CalculateMonStats(mon);
     return FALSE;
 }

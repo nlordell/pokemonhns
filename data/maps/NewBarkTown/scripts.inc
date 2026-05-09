@@ -200,6 +200,17 @@ NewBarkTown_EventScript_HelperMan3::
 	release
 	end
 
+NewBarkTown_EventScript_HelperMan4::
+	lock
+	faceplayer
+	goto_if_unset FLAG_IS_CHAMPION, HelperMan_EventScript_NotChampion
+	msgbox HelperMan_Text_MaximizeIVs, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, HelperMan_EventScript_Declined
+	nlordell_maximizeivs
+	msgbox HelperMan_Text_MaximizeIVsComplete, MSGBOX_DEFAULT
+	release
+	end
+
 HelperMan_EventScript_NotChampion::
 	msgbox HelperMan_Text_NotChampion, MSGBOX_DEFAULT
 	release
@@ -344,6 +355,10 @@ HelperMan_Text_ReRandomize:
 	.string "I can re-randomize your active\n"
 	.string "POKéMON.$"
 
+HelperMan_Text_MaximizeIVs:
+	.string "I can maximize the IVs for\n"
+	.string "your active POKéMON.$"
+
 HelperMan_Text_ResetEVsComplete:
 	.string "All done, your POKéMON EVs\n"
 	.string "have been reset to 0!$"
@@ -351,6 +366,9 @@ HelperMan_Text_ResetEVsComplete:
 HelperMan_Text_ReRandomizeComplete:
 	.string "Your POKéMON's IVs are now:\n"
 	.string "{STR_VAR_1}.$"
+
+HelperMan_Text_MaximizeIVsComplete:
+	.string "Your POKéMON is now OP!$"
 
 HelperMan_Text_Declined:
 	.string "Come back whenever!$"

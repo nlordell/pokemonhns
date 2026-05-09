@@ -12219,21 +12219,7 @@ u16 MonTryLearningNewMoveEvolution(struct Pokemon *mon, bool8 firstMove)
     return 0;
 }
 
-// Warning: here be dragons...
-void nlordell_ResetMonEVs(struct Pokemon *mon)
-{
-    u8 zero;
-
-    zero = 0;
-    SetMonData(mon, MON_DATA_HP_EV, &zero);
-    SetMonData(mon, MON_DATA_ATK_EV, &zero);
-    SetMonData(mon, MON_DATA_DEF_EV, &zero);
-    SetMonData(mon, MON_DATA_SPEED_EV, &zero);
-    SetMonData(mon, MON_DATA_SPATK_EV, &zero);
-    SetMonData(mon, MON_DATA_SPDEF_EV, &zero);
-    CalculateMonStats(mon);
-}
-
+// WARNING: here be dragons...
 void nlordell_ReRandomizeMon(struct Pokemon *mon)
 {
     struct BoxPokemon *boxMon;

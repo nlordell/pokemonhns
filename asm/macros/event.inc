@@ -1856,6 +1856,10 @@
 	.macro nlordell_rerandomize
 	.byte 0xf7
 	.endm
+	@ Maximizes IVs with a neutral nature
+	.macro nlordell_maximizeivs
+	.byte 0xf8
+	.endm
 
 	.macro _dynmultichoice left:req, top:req, ignoreBPress:req, maxBeforeScroll:req, shouldSort:req, initialSelected:req, callbacks:req argv:vararg
 	.byte 0xf1

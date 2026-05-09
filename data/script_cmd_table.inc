@@ -248,6 +248,7 @@ gScriptCmdTable::
 	.4byte ScrCmd_checkrandomizer					@ 0xf5 checks if randomized
 	.4byte ScrCmd_nlordell_resetevs                 @ 0xf6
 	.4byte ScrCmd_nlordell_rerandomize              @ 0xf7
+	.4byte ScrCmd_nlordell_maximizeivs              @ 0xf8
 
 
 gScriptCmdTableEnd::
